@@ -1,7 +1,7 @@
 <script>
-	import { Navbar } from '$lib/components/navbar';
+	import Header from '$lib/components/header/+page.svelte';
 </script>
 
 <div>
-	<Navbar />
+	<Header />
 </div>

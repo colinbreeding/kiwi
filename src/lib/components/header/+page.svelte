@@ -7,7 +7,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 </script>
 
-<div class="flex w-full items-center justify-between p-2">
+<div class="flex w-full items-center justify-between border-b border-border p-2">
 	<div class="flex items-center gap-1">
 		<img src={kiwiLogo} alt="Kiwi Logo" class="h-7 max-h-7 min-h-7 w-7 max-w-7 min-w-7" />
 		<span class="text-xl font-bold">Kiwi</span>
