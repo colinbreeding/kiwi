@@ -1,8 +1,8 @@
 <script>
 	import Header from '$lib/components/header/+page.svelte';
 	import { NodeEditor } from '$lib/components/note-editor';
-	import { Provider as SidebarProvider } from '$lib/components/ui/sidebar';
 	import { Sidebar } from '$lib/components/sidebar';
+	import { Provider as SidebarProvider } from '$lib/components/ui/sidebar';
 </script>
 
 <div class="flex min-h-svh flex-col">

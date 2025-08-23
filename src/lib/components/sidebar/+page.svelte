@@ -167,7 +167,7 @@
 </script>
 
 <Sidebar.Root bind:ref variant="inset" {...restProps} class="bg-background p-4 pr-0">
-	<Sidebar.Header class="bg-background px-0 pt-0.5 pb-4">
+	<Sidebar.Header class="bg-background p-4 md:px-0 md:pt-0.5">
 		<Sidebar.Menu class="bg-background">
 			<Sidebar.MenuItem class="bg-background">
 				<div class="flex w-full items-center justify-between">
@@ -181,7 +181,7 @@
 			</Sidebar.MenuItem>
 		</Sidebar.Menu>
 	</Sidebar.Header>
-	<Sidebar.Content class="flex flex-col gap-2 bg-background">
+	<Sidebar.Content class="flex flex-col gap-2 bg-background px-4 pb-4 md:p-0">
 		{#each testNotes as note}
 			<div class="flex cursor-pointer flex-col gap-1 rounded-lg bg-muted/50 p-4 hover:bg-muted">
 				<div class="flex items-center justify-between">

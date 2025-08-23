@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { SidebarInset } from '$lib/components/ui/sidebar';
-	import NoteManager from './note-manager/+page.svelte';
+	import { NoteManager } from './note-manager';
+	import { NoteToolbar } from './note-toolbar';
 </script>
 
-<SidebarInset class="!m-4 !mt-2 bg-muted/50">
+<SidebarInset class="!m-4 !mt-2 overflow-hidden rounded-lg border border-border/50 bg-muted/50">
 	<NoteManager />
-	<div class="flex flex-1 flex-col gap-4 p-4 pt-0"></div>
+	<NoteToolbar />
 </SidebarInset>
