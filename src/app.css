@@ -121,3 +121,13 @@
 		@apply bg-background font-jetbrains text-foreground;
 	}
 }
+
+[data-slot='sidebar-wrapper'] {
+	@apply bg-background;
+}
+
+[data-slot='sidebar-wrapper'].with-header-offset [data-slot='sidebar-container'] {
+	/* Always respect the header offset variable when present */
+	top: var(--header-offset, 0px);
+	height: calc(100svh - var(--header-offset, 0px));
+}
