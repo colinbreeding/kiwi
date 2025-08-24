@@ -6,7 +6,7 @@
 
 <div class="flex flex-1 flex-col gap-4 bg-muted/50 pt-0">
 	<div
-		class="-ml-1 flex items-center gap-2 border-b border-border/50 bg-transparent px-4 py-2 text-muted-foreground shadow-sm"
+		class="-ml-1 flex items-center gap-2 border-b border-border/50 bg-transparent px-4 py-2 text-muted-foreground"
 	>
 		<Button variant="ghost" class="size-7 cursor-pointer text-foreground hover:!bg-muted">
 			<WandSparkles size={16} />

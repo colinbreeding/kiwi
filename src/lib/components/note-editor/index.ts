@@ -1,1 +1,1 @@
-export { default as NodeEditor } from './+page.svelte';
+export { default as NodeEditor } from './NoteEditor.svelte';

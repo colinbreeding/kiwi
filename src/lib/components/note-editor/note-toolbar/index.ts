@@ -1,1 +1,1 @@
-export { default as NoteToolbar } from './+page.svelte';
+export { default as NoteToolbar } from './NoteToolbar.svelte';

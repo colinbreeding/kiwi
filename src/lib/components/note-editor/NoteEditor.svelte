@@ -4,7 +4,7 @@
 	import { NoteToolbar } from './note-toolbar';
 </script>
 
-<SidebarInset class="!m-4 !mt-2 overflow-hidden rounded-lg border border-border/50 bg-muted/50">
+<SidebarInset class="!m-4 !mt-0 overflow-hidden !rounded-md border border-border/50 bg-muted/50">
 	<NoteManager />
 	<NoteToolbar />
 </SidebarInset>

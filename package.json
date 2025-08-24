@@ -45,6 +45,7 @@
 	},
 	"dependencies": {
 		"@supabase/auth-helpers-sveltekit": "^0.13.0",
+		"@supabase/ssr": "^0.7.0",
 		"@supabase/supabase-js": "^2.56.0",
 		"mode-watcher": "^1.1.0"
 	}

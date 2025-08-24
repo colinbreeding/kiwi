@@ -1,1 +1,1 @@
-export { default as NoteManager } from './+page.svelte';
+export { default as NoteManager } from './NoteManager.svelte';

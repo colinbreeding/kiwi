@@ -1,1 +1,1 @@
-export { default as Navbar } from './+page.svelte';
+export { default as Header } from './Header.svelte';
