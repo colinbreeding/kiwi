@@ -167,8 +167,8 @@
 </script>
 
 <Sidebar.Root bind:ref variant="inset" {...restProps} class="bg-background p-4 pt-0 pr-0">
-	<Sidebar.Header class="bg-background p-4 md:px-0 md:py-3">
-		<Sidebar.Menu class="bg-background">
+	<Sidebar.Header class="h-12 bg-background px-0">
+		<Sidebar.Menu class="flex h-full justify-center bg-background">
 			<Sidebar.MenuItem class="bg-background">
 				<div class="flex w-full items-center justify-between">
 					<div>
