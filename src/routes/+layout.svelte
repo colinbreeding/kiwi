@@ -3,10 +3,11 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { ModeWatcher } from 'mode-watcher';
 	import { AuthDialog } from '$lib/components/auth';
+	import { PUBLIC_CONVEX_URL } from '$env/static/public';
 	import { setupConvex } from 'convex-svelte';
 
 	let { children } = $props();
-	setupConvex(import.meta.env.PUBLIC_CONVEX_URL);
+	setupConvex(PUBLIC_CONVEX_URL);
 </script>
 
 <svelte:head>
