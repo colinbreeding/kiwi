@@ -1,12 +1,13 @@
 <script lang="ts">
 	import kiwiLogo from '$lib/assets/kiwi_logo.png';
-	import { authDialog, closeAuthDialog } from '$lib/hooks/auth-dialog.svelte';
+	import { useAuthDialog, closeAuthDialog } from '$lib/hooks/useAuthDialog.svelte';
 	import * as Dialog from '$lib/components/ui/dialog/index.js';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Input from '$lib/components/ui/input/input.svelte';
 	import Card from '$lib/components/ui/card/card.svelte';
 	import GoogleIcon from '$lib/assets/icons/GoogleIcon.svelte';
 	import { Github } from '@lucide/svelte';
+	import type { AuthDialogState } from '$lib/types/auth/authDialog';
 
 	let email = $state('');
 	let open = $state(false);
@@ -28,7 +29,7 @@
 	}
 
 	$effect(() => {
-		const state = $authDialog as { open: boolean; mode: AuthDialog.AuthDialogMode };
+		const state = $useAuthDialog as AuthDialogState;
 		open = state?.open ?? false;
 	});
 </script>

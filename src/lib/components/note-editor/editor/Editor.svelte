@@ -19,11 +19,12 @@
 	import Placeholder from '@tiptap/extension-placeholder';
 	import TaskList from '@tiptap/extension-task-list';
 	import TaskItem from '@tiptap/extension-task-item';
+	import type { SlashCommandItem, SlashMenuItem } from '$lib/types/noteEditor/slashMenu';
 
 	let element: HTMLElement;
 	let editor: Editor;
 	let slashOpen = false;
-	let slashItems: NoteEditor.SlashMenuItem[] = [];
+	let slashItems: SlashMenuItem[] = [];
 	let slashIndex = 0;
 	let slashTop = 0;
 	let slashLeft = 0;
@@ -60,7 +61,7 @@
 				}),
 				SlashExtension.configure({
 					items: (query: string) => {
-						const all: NoteEditor.SlashCommandItem[] = [
+						const all: SlashCommandItem[] = [
 							{
 								title: 'Text',
 								description: 'Just start typing with plain text.',

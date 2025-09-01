@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import type { SlashMenuItem } from '$lib/types/noteEditor/slashMenu';
+	import { cn } from '$lib/utils/shadcn';
 
 	export let open = false;
-	export let items: NoteEditor.SlashMenuItem[] = [];
+	export let items: SlashMenuItem[] = [];
 	export let selectedIndex = 0;
 	export let top = 0;
 	export let left = 0;

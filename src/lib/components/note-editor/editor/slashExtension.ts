@@ -1,18 +1,7 @@
 import { Extension } from '@tiptap/core';
 import Suggestion from '@tiptap/suggestion';
 import type { Plugin } from '@tiptap/pm/state';
-
-export interface SlashOptions {
-	items: (query: string) => NoteEditor.SlashCommandItem[];
-	onOpen?: () => void;
-	onClose?: () => void;
-	onUpdate?: (props: {
-		items: NoteEditor.SlashCommandItem[];
-		clientRect: (() => DOMRect | null) | null;
-		query: string;
-		range: { from: number; to: number };
-	}) => void;
-}
+import type { SlashCommandItem, SlashOptions } from '$lib/types/noteEditor/slashMenu';
 
 export const SlashExtension = Extension.create<SlashOptions>({
 	name: 'slash-command',
@@ -77,7 +66,7 @@ export const SlashExtension = Extension.create<SlashOptions>({
 					}
 				}),
 				command: ({ editor, range, props }) => {
-					const item = props?.item as NoteEditor.SlashCommandItem | undefined;
+					const item = props?.item as SlashCommandItem | undefined;
 					if (!item) return;
 					item.command({ editor, range });
 				}
