@@ -5,19 +5,15 @@
 	import MoonIcon from '@lucide/svelte/icons/moon';
 	import { toggleMode } from 'mode-watcher';
 	import { Button } from '$lib/components/ui/button/index.js';
-	import supabase from '../../../server/supabase';
-	import { openAuthDialog } from '$lib/hooks/auth-dialog.svelte';
+	// import { openAuthDialog } from '$lib/hooks/auth-dialog.svelte';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu/index.js';
 
-	let user = supabase.user;
-	let userProfile = $derived($user?.user_metadata);
-
-	async function handleSignIn() {
-		openAuthDialog('login', 'header');
-	}
+	// async function handleSignIn() {
+	// 	openAuthDialog('login', 'header');
+	// }
 
 	async function handleSignOut() {
-		await supabase.signOut();
+		// handle sign out
 	}
 </script>
 
@@ -36,24 +32,24 @@
 			/>
 			<span class="sr-only">Toggle theme</span>
 		</Button>
-		{#if $user}
-			<DropdownMenu.Root>
-				<DropdownMenu.Trigger class="cursor-pointer"
-					><Avatar>
-						<AvatarImage src={userProfile?.avatar_url} />
-						<AvatarFallback>{userProfile?.name?.charAt(0)}</AvatarFallback>
-					</Avatar></DropdownMenu.Trigger
-				>
-				<DropdownMenu.Content>
-					<DropdownMenu.Group>
-						<DropdownMenu.Label>My Account</DropdownMenu.Label>
-						<DropdownMenu.Separator />
-						<DropdownMenu.Item onclick={handleSignOut}>Sign out</DropdownMenu.Item>
-					</DropdownMenu.Group>
-				</DropdownMenu.Content>
-			</DropdownMenu.Root>
-		{:else}
-			<Button onclick={handleSignIn} class="cursor-pointer">Sign in</Button>
-		{/if}
+		<!-- {#if $user} -->
+		<DropdownMenu.Root>
+			<DropdownMenu.Trigger class="cursor-pointer"
+				><Avatar>
+					<AvatarImage src="https://example.com/avatar.jpg" />
+					<AvatarFallback>CN</AvatarFallback>
+				</Avatar></DropdownMenu.Trigger
+			>
+			<DropdownMenu.Content>
+				<DropdownMenu.Group>
+					<DropdownMenu.Label>My Account</DropdownMenu.Label>
+					<DropdownMenu.Separator />
+					<DropdownMenu.Item onclick={handleSignOut}>Sign out</DropdownMenu.Item>
+				</DropdownMenu.Group>
+			</DropdownMenu.Content>
+		</DropdownMenu.Root>
+		<!-- {:else} -->
+		<!-- <Button onclick={handleSignIn} class="cursor-pointer">Sign in</Button>
+		{/if} -->
 	</div>
 </div>

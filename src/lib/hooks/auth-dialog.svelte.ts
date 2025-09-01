@@ -1,21 +1,21 @@
 import { get, writable, type Readable } from 'svelte/store';
 
-const internalStore = writable<AuthDialog.AuthDialogState>({ open: false, mode: 'login' });
+const authStore = writable<AuthDialog.AuthDialogState>({ open: false, mode: 'login' });
 
 export const authDialog: Readable<AuthDialog.AuthDialogState> = {
-	subscribe: internalStore.subscribe
+	subscribe: authStore.subscribe
 };
 
 export function openAuthDialog(mode: AuthDialog.AuthDialogMode = 'login', origin?: string): void {
-	internalStore.update((state) => ({ ...state, open: true, mode, origin }));
+	authStore.update((state) => ({ ...state, open: true, mode, origin }));
 }
 
 export function closeAuthDialog(): void {
-	internalStore.update((state) => ({ ...state, open: false }));
+	authStore.update((state) => ({ ...state, open: false }));
 }
 
 export function setAuthDialogMode(mode: AuthDialog.AuthDialogMode): void {
-	internalStore.update((state) => ({ ...state, mode }));
+	authStore.update((state) => ({ ...state, mode }));
 }
 
 /**

@@ -7,21 +7,20 @@
 	import Card from '$lib/components/ui/card/card.svelte';
 	import GoogleIcon from '$lib/assets/icons/GoogleIcon.svelte';
 	import { Github } from '@lucide/svelte';
-	import supabase from '../../../server/supabase';
 
 	let email = $state('');
 	let open = $state(false);
 
 	function handleSendMagicLink() {
-		supabase.signIn(email);
+		// handle magic link
 	}
 
 	function handleSignInWithGithub() {
-		supabase.signInWithGithub();
+		// handle github sign in
 	}
 
 	function handleSignInWithGoogle() {
-		supabase.signInWithGoogle();
+		// handle google sign in
 	}
 
 	function handleOpenChange(next: boolean) {
