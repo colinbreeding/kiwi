@@ -13,8 +13,8 @@
 	--card-foreground: oklch(0.145 0 0);
 	--popover: oklch(1 0 0);
 	--popover-foreground: oklch(0.145 0 0);
-	--primary: oklch(78.07% 0.191 136.36);
-	--primary-foreground: oklch(0.205 0 0);
+	--primary: oklch(78.2% 0.188 136.27);
+	--primary-foreground: oklch(0.985 0 0);
 	--secondary: oklch(0.97 0 0);
 	--secondary-foreground: oklch(0.205 0 0);
 	--muted: oklch(0.97 0 0);
@@ -40,7 +40,6 @@
 	--sidebar-border: oklch(0.922 0 0);
 	--sidebar-ring: oklch(0.708 0 0);
 }
-
 .dark {
 	--background: oklch(0.145 0 0);
 	--foreground: oklch(0.985 0 0);
@@ -48,7 +47,7 @@
 	--card-foreground: oklch(0.985 0 0);
 	--popover: oklch(0.205 0 0);
 	--popover-foreground: oklch(0.985 0 0);
-	--primary: oklch(78.07% 0.191 136.36);
+	--primary: oklch(78.2% 0.188 136.27);
 	--primary-foreground: oklch(0.205 0 0);
 	--secondary: oklch(0.269 0 0);
 	--secondary-foreground: oklch(0.985 0 0);
@@ -119,12 +118,12 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		@apply bg-background font-jetbrains text-foreground;
+		@apply bg-sidebar font-jetbrains text-foreground;
 	}
 }
 
 [data-slot='sidebar-wrapper'] {
-	@apply bg-background;
+	@apply bg-sidebar;
 }
 
 [data-slot='sidebar-wrapper'].with-header-offset [data-slot='sidebar-container'] {

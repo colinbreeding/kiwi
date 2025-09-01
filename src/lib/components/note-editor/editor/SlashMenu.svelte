@@ -30,21 +30,28 @@
 <svelte:window on:keydown={onKeyDown} />
 
 {#if open}
-	<div class="fixed z-50" style={`top:${top}px;left:${left}px`}>
+	<div
+		class="fixed z-50"
+		style={`top:${top}px;left:${left}px`}
+		role="menu"
+		tabindex="-1"
+		on:mousedown|preventDefault
+	>
 		<div
 			class={cn('w-72 rounded-md border bg-popover p-2 text-popover-foreground shadow-md')}
 			role="menu"
 		>
 			<div class="max-h-80 overflow-auto">
-				{#each items as item, i}
+				{#each items as item, i (item.id)}
 					<button
 						type="button"
+						role="menuitem"
 						class={cn(
 							'flex w-full items-start gap-3 rounded-md px-3 py-2 text-left hover:bg-accent',
 							i === selectedIndex ? 'bg-accent' : ''
 						)}
 						on:mouseenter={() => (selectedIndex = i)}
-						on:click={() => item.action()}
+						on:mousedown={() => item.action()}
 					>
 						{#if item.icon}
 							<svelte:component this={item.icon} class="mt-0.5 size-5 min-w-5 opacity-70" />

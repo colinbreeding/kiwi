@@ -10,7 +10,6 @@
 	import supabase from '../../../server/supabase';
 
 	let email = $state('');
-	let mode = $state<AuthDialog.AuthDialogMode>('login');
 	let open = $state(false);
 
 	function handleSendMagicLink() {
@@ -32,7 +31,6 @@
 	$effect(() => {
 		const state = $authDialog as { open: boolean; mode: AuthDialog.AuthDialogMode };
 		open = state?.open ?? false;
-		mode = state?.mode ?? 'login';
 	});
 </script>
 

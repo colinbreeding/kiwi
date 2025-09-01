@@ -31,10 +31,10 @@
 	];
 </script>
 
-<Sidebar.Root bind:ref variant="inset" {...restProps} class="bg-background p-4 pt-0 pr-0">
-	<Sidebar.Header class="h-12 bg-background px-0">
-		<Sidebar.Menu class="flex h-full justify-center bg-background">
-			<Sidebar.MenuItem class="bg-background">
+<Sidebar.Root bind:ref variant="inset" {...restProps} class="bg-sidebar p-4 pt-2 pr-0">
+	<Sidebar.Header class="h-12 bg-sidebar px-4 md:px-0">
+		<Sidebar.Menu class="flex h-full justify-center bg-sidebar">
+			<Sidebar.MenuItem class="bg-sidebar">
 				<div class="flex w-full items-center justify-between">
 					<div>
 						<h2 class="text-lg font-semibold">Notes</h2>
@@ -46,9 +46,11 @@
 			</Sidebar.MenuItem>
 		</Sidebar.Menu>
 	</Sidebar.Header>
-	<Sidebar.Content class="flex flex-col gap-2 bg-background px-4 pb-4 md:p-0">
+	<Sidebar.Content class="flex flex-col gap-2 bg-sidebar px-4 pb-4 md:p-0">
 		{#each testNotes as note (note.name)}
-			<div class="flex cursor-pointer flex-col gap-1 rounded-lg bg-muted/50 p-4 hover:bg-muted">
+			<div
+				class="flex cursor-pointer flex-col gap-1 rounded-lg bg-muted-foreground/10 p-4 hover:bg-muted-foreground/20 dark:bg-muted hover:dark:bg-muted-foreground/20"
+			>
 				<div class="flex items-center justify-between">
 					<h2 class="text-sm leading-tight font-normal">{note.name}</h2>
 					<p class="text-[10px] leading-tight text-muted-foreground">{note.date}</p>
@@ -59,7 +61,7 @@
 			</div>
 		{/each}
 	</Sidebar.Content>
-	<Sidebar.Footer class="bg-background">
+	<Sidebar.Footer class="bg-sidebar">
 		<!-- TODO: Add sidebar footer here -->
 	</Sidebar.Footer>
 </Sidebar.Root>
