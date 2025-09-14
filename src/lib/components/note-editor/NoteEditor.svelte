@@ -4,7 +4,7 @@
 	import Editor from './editor/Editor.svelte';
 </script>
 
-<SidebarInset class="!m-4 !mt-2 overflow-y-auto !rounded-lg bg-background">
+<SidebarInset class="!m-3 !mt-0 overflow-y-auto !rounded-sm bg-background">
 	<NoteManager />
 	<div class="h-[85vh] overflow-y-auto">
 		<Editor />

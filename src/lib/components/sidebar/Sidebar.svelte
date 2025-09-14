@@ -31,7 +31,7 @@
 	];
 </script>
 
-<Sidebar.Root bind:ref variant="inset" {...restProps} class="bg-sidebar p-4 pt-2 pr-0">
+<Sidebar.Root bind:ref variant="inset" {...restProps} class="bg-sidebar p-3 pt-0 pr-0">
 	<Sidebar.Header class="h-12 bg-sidebar px-4 md:px-0">
 		<Sidebar.Menu class="flex h-full justify-center bg-sidebar">
 			<Sidebar.MenuItem class="bg-sidebar">
@@ -39,7 +39,7 @@
 					<div>
 						<h2 class="text-lg font-semibold">Notes</h2>
 					</div>
-					<Button variant="ghost" class="size-7 cursor-pointer hover:!bg-muted">
+					<Button variant="ghost" class="size-7 cursor-pointer !rounded-sm hover:!bg-muted">
 						<SquarePen />
 					</Button>
 				</div>

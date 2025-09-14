@@ -7,7 +7,7 @@
 
 <div class="flex h-12 shrink-0 items-center justify-between gap-2 border-b border-border/50 px-4">
 	<div class="flex items-center gap-2">
-		<Sidebar.Trigger class="-ml-1 cursor-pointer hover:!bg-muted" />
+		<Sidebar.Trigger class="-ml-1 cursor-pointer !rounded-sm hover:!bg-muted" />
 		<Separator orientation="vertical" class="mr-2 data-[orientation=vertical]:h-4" />
 		<h1 class="text-md">Test Note</h1>
 	</div>
@@ -15,11 +15,11 @@
 		<p class="mr-2 text-xs text-muted-foreground">Last updated 10 minutes ago</p>
 		<Button
 			variant="ghost"
-			class="size-7 cursor-pointer hover:!bg-destructive/10 hover:!text-destructive"
+			class="size-7 cursor-pointer rounded-sm hover:!bg-destructive/10 hover:!text-destructive"
 		>
 			<Trash />
 		</Button>
-		<Button variant="ghost" class="size-7 cursor-pointer hover:!bg-muted">
+		<Button variant="ghost" class="size-7 cursor-pointer rounded-sm hover:!bg-muted">
 			<Save />
 		</Button>
 	</div>

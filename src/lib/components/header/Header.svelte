@@ -17,13 +17,13 @@
 	}
 </script>
 
-<div class="flex h-12 w-full items-center justify-between p-4">
+<div class="flex h-12 w-full items-center justify-between px-3 py-4">
 	<div class="-ml-1 flex items-center gap-1">
 		<img src={kiwiLogo} alt="Kiwi Logo" class="h-7 max-h-7 min-h-7 w-7 max-w-7 min-w-7" />
 		<span class="text-xl font-bold">Kiwi</span>
 	</div>
 	<div class="flex items-center gap-2">
-		<Button onclick={toggleMode} variant="outline" size="icon" class="cursor-pointer">
+		<Button onclick={toggleMode} variant="outline" size="icon" class="size-8 cursor-pointer">
 			<SunIcon
 				class="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 !transition-all dark:scale-0 dark:-rotate-90"
 			/>
